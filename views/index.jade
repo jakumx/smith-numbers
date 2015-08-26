@@ -2,4 +2,37 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  hr
+  p 
+    | A&nbsp;
+    a(href="https://en.wikipedia.org/wiki/Smith_number", target="_blank") Smith number&nbsp;
+    | is a composite number for which, in a given base (in base 10 by default), the sum of its digits is equal to the sum of the digits in its prime factorization. For example, 378 = 2 × 3 × 3 × 3 × 7 is a Smith number since 3 + 7 + 8 = 2 + 3 + 3 + 3 + 7. In this definition the factors are treated as digits: for example, 22 factors to 2 × 11 and yields three digits: 2, 1, 1. Therefore 22 is a Smith number because 2 + 2 = 2 + 1 + 1.
+  p Check is a Smith number
+  p#error(style="display: none;") only postive integer
+  p 
+    | Number:
+    br
+    input#number(type="number")
+  p
+    button#check(type="button") Check
+    &nbsp;
+    button#clear(type="button") Clear
+
+  p
+    span Your number&nbsp;
+    span#numVal
+    span &nbsp;is&nbsp;
+    span#correctOrNot
+    br
+    span prime factorization:&nbsp;
+    span#primeFac
+    br
+    span#sumStringNum1
+    span.eqOrNot
+    span#sumStringNum2
+    br
+    span#sumNum1
+    span.eqOrNot
+    span#sumNum2
+
+
